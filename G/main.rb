@@ -15,7 +15,9 @@ lr = r1 +r2
 #puts l                                                       
 (out +="Tangent: ") if l == (r1 - r2).abs
 (out +="Too far") if l > lr
-(out += "2 inside 1") if r2 < r1 and lr > l
-(out += "1 inside 2") if r2 > r1 and lr > l
+(out += "2 inside 1") if r2 < r1 and lr > l and l != (r1 - r2).abs
+(out += "1 inside 2") if r2 > r1 and lr > l and l != (r1 - r2).abs
+(out += "2 in 1") if r2 < r1 and lr > l and l == (r1 - r2).abs
+(out += "1 in 2") if r2 > r1 and lr > l and l == (r1 - r2).abs
 (out += "Intersect") if lr > l and (l > (r1 - r2).abs)
 File.open('twoc.out','w'){|file| file.puts out}
