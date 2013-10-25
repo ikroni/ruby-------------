@@ -6,14 +6,7 @@ b = mas[1].to_f
 l =Math.sqrt(a**2 - (b/2)**2)
 alfa = Math.acos(b/(2*a))
 sungl = 2*a*b*Math.cos(alfa)
-#puts "S ungle = #{sungl}"
-#puts "b = #{b}"
-#puts "a  = #{a}"
 S = l*b/2 
 p = (a + b/2)
-puts "S = #{S}"
-puts "p = #{p}"
-#r = sungl / p
 r= S/p
-#r = Math.sqrt(2*(p-a)*(p-b)/p)
-puts "r = #{r}"
+File.open('pack.out','w'){|f| f.puts '%.4f' % r}
