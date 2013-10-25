@@ -28,3 +28,13 @@ puts city
 puts "Roads:"
 puts road
 
+D=[]
+
+for k in 0..city.legth-1
+  for i in 0..city.length-1
+    for j in 0..city.length-1
+      D << Math.sqrt((citi[k][0]-city[i][0])**2+(citi[k][1]-city[i][1])**2)) if 
+    end
+  end
+end
+File.open('maxdist.out','w'){|f| f.puts D}
