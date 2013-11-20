@@ -51,5 +51,12 @@ for i in 0..city.length
       max = D[i][j] if D[i][j] > max and D[i][j] < Float::MAX
   end
 end
-max = -1 if max == 0.0
-File.open('maxdist.out','w'){|f| f.puts '%.6f' % max}
+res = '%.7f' % max unless max == 0.0
+res_st = "#{res}"
+#puts res_st
+res_st.chop!
+res_st_spl = res_st.split('.')
+res_st = res_st_spl[0] if res_st_spl[1] == "000000"
+#puts res_st
+File.open('maxdist.out','w'){|f| f.puts res_st} unless max == 0.0
+File.open('maxdist.out','w'){|f| f.puts '-1'} unless max != 0.0
