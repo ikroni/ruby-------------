@@ -120,7 +120,9 @@ while c.end_time > c.now do
     puts ""
     c.time_next_ticket
   end
-  c.time_work_ticket unless a.empty?
+  if not a.empty? and c.time_work_ticket? == 0 
+    c.time_work_ticket
+  end 
   if c.time_work_ticket? != 0
     if c.now >= c.time_work_ticket? 
       a.dequeue
