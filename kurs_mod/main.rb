@@ -6,6 +6,8 @@ timer = Class.new do
     @random = '%.2f' % rand
     @time_next_ticket = @start_time + (5 + 8 * @random.to_f)/60
     @time_work_ticket = 0
+    @random = '%.2f' % rand
+    @time_broke_chanel = @start_time + (165 + 70* @random.to_f)/60
   end
 
   def initialized?
@@ -40,6 +42,15 @@ timer = Class.new do
 
   def time_work_ticket_zero
     @time_work_ticket = 0
+  end
+
+  def time_broke_chanel?
+    @time_broke_chanel
+  end
+
+  def time_broke_chanel
+    @random = '%.2f' % rand
+    @time_work_ticket = self.now + (165 + 70 * @random.to_f)/60
   end
 end
 
