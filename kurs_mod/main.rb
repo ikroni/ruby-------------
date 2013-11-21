@@ -1,139 +1,44 @@
-timer = Class.new do
-  def initialize
-    @initialized = true
-    @start_time = Time.now
-    @end_time = @start_time + 60
-    @random = '%.2f' % rand
-    @time_next_ticket = @start_time + (5 + 8 * @random.to_f)/60
-    @time_work_ticket = 0
-    @random = '%.2f' % rand
-    @time_broke_chanel = @start_time + (165 + 70* @random.to_f)/60
-  end
-
-  def initialized?
-    @initialized || false
-  end
-
-  def now
-    Time.now
-  end
-
-  def end_time
-    @end_time
-  end
-
-  def time_next_ticket?
-    @time_next_ticket
-  end
-  
-  def time_next_ticket
-    @random = '%.2f' % rand
-    @time_next_ticket = self.now + (5 + 8 * @random.to_f)/60
-  end
-
-  def time_work_ticket?
-    @time_work_ticket
-  end
-
-  def time_work_ticket
-    @random = '%.2f' % rand
-    @time_work_ticket = self.now + (4 + 6 * @random.to_f)/60
-  end
-
-  def time_work_ticket_zero
-    @time_work_ticket = 0
-  end
-
-  def time_broke_chanel?
-    @time_broke_chanel
-  end
-
-  def time_broke_chanel
-    @random = '%.2f' % rand
-    @time_work_ticket = self.now + (165 + 70 * @random.to_f)/60
-  end
-end
-
-ticket = Class.new do
-  def initialize
-    @initialized = true
-    @tik = 0
-    @state_tik = 0
-  end
-
-  def initialized?
-    @initialized || false
-  end
-
-
-end
-
-queue = Class.new do
-  def initialize
-    @initialized = true
-    @tik = 0
-    @col_tik = 0
-    @store = []
-  end
-
-  def initialized?
-    @initialized || false
-  end
-
-  def tik?
-    @tik
-  end
-
-  def col_tik?
-    @col_tik
-  end
-
-  def enqueue(a)
-    @store << a
-    @tik+=1
-    @col_tik+=1
-  end
-
-  def dequeue
-    @store.shift
-    @tik-=1
-  end
-
-  def peek
-    @store.first
-  end
-  
-  def length
-    @store.length
-  end
-
-  def empty?
-    @store.empty?
-  end
-end
-
-c = timer.new
-a = queue.new
+require_relative "classes/timer"
+require_relative "classes/queue"
+require_relative "classes/ticket"
+i = 0
+c = Timer.new
+a = Queue.new
+STDOUT.reopen(File.open('log.txt', 'a+'))
 puts "Inintialized? #{a.initialized?}"
 puts "a.tik? #{a.tik?}"
 puts "a.col_tik? #{a.col_tik?}"
 puts "a.empty? #{a.empty?}"
 puts "a.length #{a.length}"
 puts ""
+puts "Number - Tickets in queue - Tickets entered - Chanel in work - Time now"
 while c.end_time > c.now do
+  #puts "c.now #{c.now.to_f} c.time_for_log? #{c.time_for_log?.to_f}"
+  if c.now.to_f > c.time_for_log?.to_f
+    i+=1
+    chanel = c.chanel_state? ? "General" : "Reserv"
+    puts "#{i} - #{a.tik?} - #{a.col_tik?} - #{chanel} - #{'%.6f' % c.now.to_f}"
+    c.time_for_log
+  end
   if c.now >= c.time_next_ticket? 
-    b = ticket.new
+    b = Ticket.new
     a.enqueue(b)
-    puts "a.tik? #{a.tik?}"
-    puts "a.col_tik? #{a.col_tik?}"
-    puts "a.empty? #{a.empty?}"
-    puts "a.length #{a.length}"
-    puts ""
+    #puts "#{a.tik?} - #{a.col_tik?} - #{chanel} - #{c.now}"
+    #puts "a.col_tik? #{a.col_tik?}"
+    #puts "a.empty? #{a.empty?}"
+    #puts "a.length #{a.length}"
+    #puts ""
     c.time_next_ticket
   end
-  if not a.empty? and c.time_work_ticket? == 0 
+
+  (c.chanel_broke if c.now >= c.time_broke_chanel?) unless c.time_broke_chanel? == 0
+  (c.chanel_restore if c.now >= c.time_restore_chanel?) unless c.time_restore_chanel? == 0
+
+  if not a.empty? and c.time_work_ticket? == 0
     c.time_work_ticket
-  end 
+    c.ticket_by_reserv_chanel if not c.chanel_state?
+  end
+  
   if c.time_work_ticket? != 0
     if c.now >= c.time_work_ticket? 
       a.dequeue
@@ -141,3 +46,10 @@ while c.end_time > c.now do
     end
   end
 end
+
+puts "Result modeling:"
+puts "Work time 60 minut"
+puts "Tickets accepted #{a.col_tik?}"
+puts "Tickets accepted by reserv channel #{c.ticket_by_reserv_chanel?}"
+puts "Chanel was broked #{c.col_broke?}"
+puts "Time load reserv channel #{c.time_load_reserv_channel?}"
