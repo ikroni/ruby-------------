@@ -23,11 +23,6 @@ while c.end_time > c.now do
   if c.now >= c.time_next_ticket? 
     b = Ticket.new
     a.enqueue(b)
-    #puts "#{a.tik?} - #{a.col_tik?} - #{chanel} - #{c.now}"
-    #puts "a.col_tik? #{a.col_tik?}"
-    #puts "a.empty? #{a.empty?}"
-    #puts "a.length #{a.length}"
-    #puts ""
     c.time_next_ticket
   end
 
