@@ -14,6 +14,7 @@ class Timer
     @chanel_state = true
     @time_load_reserv_channel = 0
     @time_for_log = @start_time.to_f + 1.0/60.0
+    @ticket_canceled = 0
   end
 
   def initialized?
@@ -89,6 +90,7 @@ class Timer
     if self.time_work_ticket? != 0
       self.time_work_ticket_if_chanel_broken
       @ticket_by_reserv_chanel += 1
+      self.ticket_canceled!
     end
     @col_broke_chanel += 1
     @chanel_state = false
@@ -125,5 +127,13 @@ class Timer
 
   def time_load_reserv_channel?
     @time_load_reserv_channel
+  end
+
+  def ticket_canceled?
+    @ticket_canceled
+  end
+
+  def ticket_canceled!
+    @ticket_canceled+=1
   end
 end

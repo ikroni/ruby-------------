@@ -6,6 +6,9 @@ class Queue
     @col_broke = 0
     @store = []
     @store_hist = []
+    @time_max = 0
+    @time_min = Float::MAX
+    @time_work
   end
 
   def initialized?
@@ -26,8 +29,14 @@ class Queue
     @col_tik+=1
   end
 
-  def dequeue
-    @store.shift
+  def deq
+    b = self.peek
+    b.time_finish(Time.now)
+    @time_work = b.time_finish? - b.time_enter? 
+    @time_max = @time_work if @time_max < @time_work
+    @time_min = @time_work if @time_min > @time_work
+    @store_hist << @time_work
+    @store.shift 
     @tik-=1
   end
 
@@ -41,5 +50,17 @@ class Queue
 
   def empty?
     @store.empty?
+  end
+
+  def store_hist?
+    @store_hist
+  end
+
+  def time_max?
+    @time_max
+  end
+
+  def time_min?
+    @time_min
   end
 end
