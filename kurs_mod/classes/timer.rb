@@ -4,7 +4,7 @@ class Timer
     @start_time = Time.now
     @end_time = @start_time + 60
     @random = '%.2f' % rand
-    @time_next_ticket = @start_time + (5 + 8 * @random.to_f)/60
+    @time_next_ticket = @start_time + (4 + 8 * @random.to_f)/60
     @time_work_ticket = 0
     @random = '%.2f' % rand
     @time_broke_chanel = @start_time + (165 + 70* @random.to_f)/60
@@ -43,7 +43,7 @@ class Timer
   
   def time_next_ticket
     @random = '%.2f' % rand
-    @time_next_ticket = self.now + (5 + 8 * @random.to_f)/60
+    @time_next_ticket = self.now + (4 + 8 * @random.to_f)/60
   end
 
   def time_work_ticket?

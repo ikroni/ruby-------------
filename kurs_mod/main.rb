@@ -53,7 +53,7 @@ a.store_hist?.each do |s|
   l = 0
   while i < a.time_max?
     i+=dt_step
-    k[l] += 1 if s < i and (s + dt_step) > i
+    (k[l] += 1 if s < i and (s + dt_step) > i) unless k[l].nil?
     l+=1
   end
 end

@@ -1,95 +1,190 @@
 Result modeling:
 Work time 60 minut
-Max time to transite ticket 23.44
+Max time to transite ticket 39.38
 Min time to transite ticket 4.69
-Chanel was broked 15
-Ticket canceled 13
-Time load reserv channel 349.90000000000003
-Frequency chanel broke 15 at 1 houers
-Reserv chanel load 9.719444444444445 %
-63
-95
-110
-51
-30
-10
-10
+Chanel was broked 16
+Ticket canceled 15
+Time load reserv channel 363.69999999999993
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 10.102777777777776 %
+105
+128
+62
+45
+38
+13
+9
+4
+7
 6
-3
+Result modeling:
+Work time 60 minut
+Max time to transite ticket 32.81
+Min time to transite ticket 4.69
+Chanel was broked 16
+Ticket canceled 15
+Time load reserv channel 349.29999999999995
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 9.702777777777776 %
+71
+111
+82
+51
+34
+29
+19
+10
+11
 1
 Result modeling:
 Work time 60 minut
-Max time to transite ticket 22.50
+Max time to transite ticket 31.88
 Min time to transite ticket 4.69
-Chanel was broked 15
-Ticket canceled 10
-Time load reserv channel 326.08
-Frequency chanel broke 15 at 1 houers
-Reserv chanel load 9.057777777777778 %
+Chanel was broked 16
+Ticket canceled 14
+Time load reserv channel 343.28000000000003
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 9.535555555555556 %
 65
-97
-87
-66
-23
-15
-7
-5
-5
+104
+108
+56
+43
+20
+14
+9
 4
+1
 Result modeling:
 Work time 60 minut
-Max time to transite ticket 17.81
+Max time to transite ticket 33.75
+Min time to transite ticket 4.69
+Chanel was broked 16
+Ticket canceled 14
+Time load reserv channel 389.74000000000007
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 10.826111111111112 %
+134
+137
+80
+32
+12
+6
+4
+4
+5
+3
+Result modeling:
+Work time 60 minut
+Max time to transite ticket 30.94
+Min time to transite ticket 4.69
+Chanel was broked 16
+Ticket canceled 12
+Time load reserv channel 343.9599999999998
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 9.554444444444439 %
+81
+102
+86
+53
+31
+28
+32
+9
+3
+3
+Result modeling:
+Work time 60 minut
+Max time to transite ticket 25.31
 Min time to transite ticket 4.69
 Chanel was broked 15
-Ticket canceled 10
-Time load reserv channel 329.68000000000006
+Ticket canceled 12
+Time load reserv channel 354.0
 Frequency chanel broke 15 at 1 houers
-Reserv chanel load 9.15777777777778 %
-70
-52
-95
-50
-56
-21
-9
-12
+Reserv chanel load 9.833333333333334 %
+85
+89
+81
+57
+45
+31
+18
+4
+1
+1
+Result modeling:
+Work time 60 minut
+Max time to transite ticket 46.88
+Min time to transite ticket 4.69
+Chanel was broked 16
+Ticket canceled 14
+Time load reserv channel 358.06000000000006
+Frequency chanel broke 16 at 1 houers
+Reserv chanel load 9.946111111111113 %
+151
+139
+59
+27
+11
+8
 7
-6
+5
+3
+7
 Result modeling:
 Work time 60 minut
 Max time to transite ticket 26.25
 Min time to transite ticket 4.69
-Chanel was broked 16
-Ticket canceled 9
-Time load reserv channel 305.2200000000001
-Frequency chanel broke 16 at 1 houers
-Reserv chanel load 8.478333333333335 %
-130
-101
-84
-42
-9
+Chanel was broked 15
+Ticket canceled 12
+Time load reserv channel 343.12000000000006
+Frequency chanel broke 15 at 1 houers
+Reserv chanel load 9.531111111111112 %
+70
+75
+70
+63
+38
+35
+32
+23
+15
 5
-3
-2
-0
-1
 Result modeling:
 Work time 60 minut
-Max time to transite ticket 18.75
+Max time to transite ticket 24.38
 Min time to transite ticket 4.69
 Chanel was broked 16
-Ticket canceled 12
-Time load reserv channel 335.03999999999996
+Ticket canceled 14
+Time load reserv channel 346.64000000000004
 Frequency chanel broke 16 at 1 houers
-Reserv chanel load 9.306666666666665 %
-55
-51
-100
-59
-60
-14
-25
+Reserv chanel load 9.62888888888889 %
+61
+65
+111
+57
+42
+40
+22
+10
+10
 9
-3
-3
+Result modeling:
+Work time 60 minut
+Max time to transite ticket 32.81
+Min time to transite ticket 4.69
+Chanel was broked 15
+Ticket canceled 11
+Time load reserv channel 350.53999999999996
+Frequency chanel broke 15 at 1 houers
+Reserv chanel load 9.737222222222222 %
+84
+120
+82
+51
+23
+16
+10
+17
+9
+8
