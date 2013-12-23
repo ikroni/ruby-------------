@@ -1,11 +1,11 @@
 class Timer
   def initialize
     @start_time = Time.now
-    @end_time = Time.now + 60
+    @end_time = Time.now + 120
     @random = '%.2f' % rand
-    @time_ticket_a = @start_time.to_f + 0.006 + 0.006 * @random.to_f
+    @time_ticket_a = @start_time.to_f + 0.007 + 0.006 * @random.to_f
     @random = '%.2f' % rand
-    @time_ticket_b = @start_time.to_f + 0.006 + 0.006 * @random.to_f
+    @time_ticket_b = @start_time.to_f + 0.007 + 0.006 * @random.to_f
     @time_trans_a_to_b = 0
     @time_trans_b_to_a = 0
     @time_trans_sputnik = 0

@@ -1,0 +1,10 @@
+time 1387794845.205697 drop 38 tic_a 10348 tic_b 10306 chan_a 9980 chan_b 9983 chan_sp 648 chan_sp_time 6.4512 chan_sp_f 10.7520
+time 1387794965.206603 drop 82 tic_a 12561 tic_b 12578 chan_a 11942 chan_b 11959 chan_sp 1152 chan_sp_time 11.5602 chan_sp_f 19.2670
+time 1387795085.207144 drop 70 tic_a 12605 tic_b 12624 chan_a 11962 chan_b 11968 chan_sp 1225 chan_sp_time 12.1889 chan_sp_f 20.3148
+time 1387795205.2080529 drop 75 tic_a 12630 tic_b 12614 chan_a 11977 chan_b 11984 chan_sp 1204 chan_sp_time 12.0827 chan_sp_f 20.1378
+time 1387795325.2208881 drop 67 tic_a 12386 tic_b 12335 chan_a 11768 chan_b 11781 chan_sp 1103 chan_sp_time 11.0909 chan_sp_f 18.4848
+time 1387795445.22112 drop 40 tic_a 10349 tic_b 10342 chan_a 9995 chan_b 9997 chan_sp 654 chan_sp_time 6.5870 chan_sp_f 10.9783
+time 1387795565.229419 drop 26 tic_a 9916 tic_b 9902 chan_a 9617 chan_b 9621 chan_sp 551 chan_sp_time 5.5927 chan_sp_f 9.3212
+time 1387795685.236423 drop 43 tic_a 10140 tic_b 10183 chan_a 9818 chan_b 9819 chan_sp 639 chan_sp_time 6.4193 chan_sp_f 10.6988
+time 1387795805.251817 drop 36 tic_a 10147 tic_b 10152 chan_a 9828 chan_b 9832 chan_sp 600 chan_sp_time 5.9742 chan_sp_f 9.9570
+time 1387795925.2674298 drop 36 tic_a 10139 tic_b 10173 chan_a 9829 chan_b 9833 chan_sp 610 chan_sp_time 6.0788 chan_sp_f 10.1313

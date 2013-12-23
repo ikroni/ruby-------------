@@ -1,7 +1,7 @@
 require_relative "classes/queue"
 require_relative "classes/timer"
 require_relative "classes/chanel"
-
+1.upto(10){
 qa = Queue.new
 qb = Queue.new
 ca = Chanel.new
@@ -91,3 +91,4 @@ while t.now? < t.end?
 end
 chan_sp_f = chan_sp_time/0.6
 puts "time #{t.now?.to_f} drop #{droped} tic_a #{tickets_a} tic_b #{tickets_b} chan_a #{chan_a} chan_b #{chan_b} chan_sp #{chan_sp} chan_sp_time #{'%.4f' % chan_sp_time} chan_sp_f #{'%.4f' % chan_sp_f}"
+}
